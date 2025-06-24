@@ -9,60 +9,89 @@ body {
   background-color: #000;
   color: #ffa500;
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
+/* Header */
 header {
   background-color: #111;
-  padding: 1rem 2rem;
+  padding: 2rem;
   text-align: center;
   box-shadow: 0 0 15px #ffa500;
+  border-bottom: 2px solid #ffa500;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  text-shadow: 0 0 10px #ffa500;
+  font-size: 3rem;
+  text-shadow: 0 0 15px #ffa500;
 }
 
+header p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* Navigation */
 nav {
+  background-color: #111;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   gap: 2rem;
-  padding: 1rem;
+  box-shadow: 0 0 10px #ffa500;
+  border-bottom: 1px solid #ffa500;
 }
 
 nav a {
   color: #ffa500;
   text-decoration: none;
   font-weight: bold;
-  transition: all 0.3s;
+  transition: 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
 }
 
 nav a:hover {
-  color: #fff;
-  text-shadow: 0 0 5px #ffa500, 0 0 10px #ffa500;
+  background-color: #ffa500;
+  color: black;
+  box-shadow: 0 0 10px #ffa500;
 }
 
+/* Section Containers */
 section {
-  padding: 3rem;
+  padding: 3rem 2rem;
 }
 
 .glow-box {
-  background: #111;
+  background-color: #111;
   border: 2px solid #ffa500;
-  box-shadow: 0 0 15px #ffa500;
+  box-shadow: 0 0 25px #ffa500;
   padding: 2rem;
   border-radius: 15px;
   margin-bottom: 2rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.glow-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 40px #ffa500;
+}
+
+/* Projects & Gallery */
+.projects,
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .projects img,
 .gallery img {
-  width: 100%;
-  max-width: 300px;
-  margin: 1rem;
+  width: 280px;
   border-radius: 10px;
-  box-shadow: 0 0 20px #ffa500;
-  transition: transform 0.3s;
+  box-shadow: 0 0 15px #ffa500;
+  transition: transform 0.3s ease;
 }
 
 .projects img:hover,
@@ -70,37 +99,55 @@ section {
   transform: scale(1.05);
 }
 
+/* Contact + Socials */
 .socials a {
-  color: #ffa500;
+  display: inline-block;
   margin-right: 1rem;
-  font-size: 1.5rem;
-  text-shadow: 0 0 10px #ffa500;
+  color: #ffa500;
+  font-size: 1.3rem;
+  transition: 0.3s;
+  text-decoration: none;
 }
 
+.socials a:hover {
+  color: #000;
+  background-color: #ffa500;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ffa500;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 2rem;
   background-color: #111;
+  border-top: 2px solid #ffa500;
   box-shadow: 0 -5px 15px #ffa500;
+  color: white;
 }
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
+/* Scroll to Top Button */
 #scrollToTop {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   background: #ffa500;
   color: black;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  box-shadow: 0 0 10px #ffa500;
+  box-shadow: 0 0 15px #ffa500;
   display: none;
   z-index: 999;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#scrollToTop:hover {
+  background: black;
+  color: #ffa500;
+  border: 1px solid #ffa500;
+  box-shadow: 0 0 25px #ffa500;
 }
