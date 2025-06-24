@@ -167,4 +167,17 @@ footer {
 }
 
 /* ===== Glow On Scroll Animation ===== */
-.activ
+.active-glow {
+  animation: glowIn 0.8s ease forwards;
+}
+
+@keyframes glowIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
