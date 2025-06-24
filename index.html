@@ -2,54 +2,71 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sauravi's Portfolio</title>
- <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sauravi Shrestha - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section class="hero">
-    <video autoplay muted loop id="bgVideo">
-      <source src="assets/hero-bg.mp4" type="video/mp4" />
-    </video>
-    <div class="overlay">
-      <h1>Hello, I'm <span>Sauravi</span></h1>
-      <p>Creative Developer | Designer | Dreamer</p>
-    </div>
+  <header>
+    <h1>Sauravi Shrestha</h1>
+    <p>Aspiring Web Developer | BCA Student | Dream Chaser</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home" class="glow-box">
+    <h2>Welcome!</h2>
+    <p>Hello, I’m Sauravi Shrestha, a creative BCA student, hustling towards becoming an extraordinary web developer. I love designing eye-catching websites and learning new technologies every day.</p>
   </section>
 
-  <section class="about reveal">
+  <section id="about" class="glow-box">
     <h2>About Me</h2>
-    <p>Your description goes here...</p>
+    <p>I am passionate about frontend development, UI/UX, and turning ideas into visually appealing digital experiences. Currently pursuing my Bachelor in Computer Application and working hard to build a strong foundation in coding, design, and innovation.</p>
   </section>
-  <!-- Optional dark mode toggle -->
-<div class="dark-mode-toggle">
-  <label>
-    <input type="checkbox" id="darkToggle" /> Toggle Dark Mode
-  </label>
-</div>
 
-<!-- Add this to your nav section -->
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-
-  <section class="projects reveal">
-    <h2>Projects</h2>
-    <div class="project-gallery">
-      <img src="assets/project1.jpg" alt="Project 1" />
-      <img src="assets/project2.jpg" alt="Project 2" />
-      <!-- Add more as needed -->
+  <section id="projects" class="glow-box">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <img src="https://media.giphy.com/media/SWoSkN6DxTszqIKEqv/giphy.gif" alt="Project 1">
+      <img src="https://media.giphy.com/media/YlSR3n3MDrNw9ympaU/giphy.gif" alt="Project 2">
+      <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="Project 3">
+      <p>Projects will be updated here with links and details!</p>
     </div>
   </section>
 
-  <section class="contact reveal">
-    <h2>Let's Connect</h2>
-    <p>Email: sauravishrestha11@gmail.com</p>
+  <section id="gallery" class="glow-box">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://media.giphy.com/media/26BRrSvJUa0crqw4E/giphy.gif" alt="Working Hard">
+      <img src="https://media.giphy.com/media/l41lI4bYmcsPJX9Go/giphy.gif" alt="Coding Life">
+    </div>
   </section>
-<div class="glow-container">
-  <h3>Section Title</h3>
-  <p>Hello</p>
-</div>
-  <script src="js/script.js"></script>
+
+  <section id="contact" class="glow-box">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:sauravishrestha11@gmail.com" style="color: white; text-decoration: underline;">sauravishrestha11@gmail.com</a></p>
+    <div class="socials">
+      <p>Follow me:</p>
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">LinkedIn</a>
+      <a href="#" target="_blank">GitHub</a>
+      <a href="#" target="_blank">Twitter</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sauravi Shrestha. All Rights Reserved.</p>
+  </footer>
+
+  <button id="scrollToTop">Top ↑</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
