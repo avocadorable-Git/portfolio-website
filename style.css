@@ -59,6 +59,11 @@ header {
   color: white;
 }
 
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
 nav ul {
   list-style: none;
   display: flex;
