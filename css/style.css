@@ -1,37 +1,51 @@
+/* ===== Google Font Import ===== */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Inter:wght@400;700&display=swap');
+
+/* ===== Global Styles ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
   background-color: #000;
   color: #ffa500;
   overflow-x: hidden;
-  line-height: 1.6;
 }
 
-/* Header */
+/* ===== Header Section ===== */
 header {
-  background-color: #111;
-  padding: 2rem;
+  position: relative;
+  padding: 4rem 2rem;
   text-align: center;
+  background-color: #111;
   box-shadow: 0 0 15px #ffa500;
   border-bottom: 2px solid #ffa500;
+  overflow: hidden;
 }
 
-header h1 {
-  font-size: 3rem;
-  text-shadow: 0 0 15px #ffa500;
+header::before {
+  content: "";
+  background: url('IMG_1355.JPG') no-repeat center center/cover;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
 }
 
-header p {
-  font-size: 1.2rem;
-  color: #fff;
+header h1, header p {
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 10px #ffa500;
+  color: #ffa500;
 }
 
-/* Navigation */
+/* ===== Navigation Bar ===== */
 nav {
   background-color: #111;
   padding: 1rem;
@@ -57,7 +71,7 @@ nav a:hover {
   box-shadow: 0 0 10px #ffa500;
 }
 
-/* Section Containers */
+/* ===== Section Containers ===== */
 section {
   padding: 3rem 2rem;
 }
@@ -77,7 +91,7 @@ section {
   box-shadow: 0 0 40px #ffa500;
 }
 
-/* Projects & Gallery */
+/* ===== Projects & Gallery Images ===== */
 .projects,
 .gallery {
   display: flex;
@@ -99,7 +113,7 @@ section {
   transform: scale(1.05);
 }
 
-/* Contact + Socials */
+/* ===== Social Links ===== */
 .socials a {
   display: inline-block;
   margin-right: 1rem;
@@ -117,7 +131,7 @@ section {
   box-shadow: 0 0 10px #ffa500;
 }
 
-/* Footer */
+/* ===== Footer ===== */
 footer {
   text-align: center;
   padding: 2rem;
@@ -127,7 +141,7 @@ footer {
   color: white;
 }
 
-/* Scroll to Top Button */
+/* ===== Scroll to Top Button ===== */
 #scrollToTop {
   position: fixed;
   bottom: 30px;
@@ -151,3 +165,6 @@ footer {
   border: 1px solid #ffa500;
   box-shadow: 0 0 25px #ffa500;
 }
+
+/* ===== Glow On Scroll Animation ===== */
+.activ
