@@ -361,6 +361,21 @@ footer {
   }
 }
 
+
+@media (max-width: 650px) {
+  .section {
+    padding: 2.2rem 0.7rem 1.5rem 0.7rem;
+  }
+  .footer,
+  .hero {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .projects-grid {
+    flex-direction: column;
+  }
+}
+
 /* --- Enhance About and Contact: make them clearly separated and visually distinct --- */
 
 /* Give each section more top and bottom margin for separation */
@@ -401,19 +416,5 @@ footer {
   #about.section.card,
   #contact.section.card {
     box-shadow: 0 2px 20px #bfa17b33;
-  }
-}
-
-@media (max-width: 650px) {
-  .section {
-    padding: 2.2rem 0.7rem 1.5rem 0.7rem;
-  }
-  .footer,
-  .hero {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-  .projects-grid {
-    flex-direction: column;
   }
 }
