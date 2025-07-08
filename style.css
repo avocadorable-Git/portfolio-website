@@ -361,6 +361,49 @@ footer {
   }
 }
 
+/* --- Enhance About and Contact: make them clearly separated and visually distinct --- */
+
+/* Give each section more top and bottom margin for separation */
+#about.section.card,
+#contact.section.card {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Add a subtle drop shadow for strong visual separation */
+#about.section.card,
+#contact.section.card {
+  box-shadow: 0 4px 32px 0 #bfa17b55, 0 1.5px 0 #bfa17baa;
+}
+
+/* Make both sections slightly offset and distinct */
+#about.section.card {
+  background: #fffaf4;
+  border-left: 8px solid #bfa17b;
+  border-radius: 2rem 1.5rem 1.5rem 2rem;
+}
+
+#contact.section.card {
+  background: #f5ede3;
+  border-right: 8px solid #5e4635;
+  border-radius: 1.5rem 2rem 2rem 1.5rem;
+}
+
+/* Optionally, add a little space between them if they stack on mobile */
+@media (max-width: 850px) {
+  #about.section.card,
+  #contact.section.card {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-radius: 1.2rem;
+    border-width: 5px;
+  }
+  #about.section.card,
+  #contact.section.card {
+    box-shadow: 0 2px 20px #bfa17b33;
+  }
+}
+
 @media (max-width: 650px) {
   .section {
     padding: 2.2rem 0.7rem 1.5rem 0.7rem;
