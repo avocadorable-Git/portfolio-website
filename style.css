@@ -9,18 +9,15 @@
 }
 
 body, html {
-  height: 100%;
   margin: 0;
+  padding: 0;
   background: var(--beige);
   color: var(--coffee);
   font-family: 'Outfit', Arial, sans-serif;
-}
-
-body {
-  display: flex;
   min-height: 100vh;
 }
 
+/* --- SIDEBAR --- */
 .sidebar {
   background: linear-gradient(135deg, var(--latte) 40%, var(--beige) 100%);
   color: var(--coffee);
@@ -38,6 +35,7 @@ body {
   border-top-right-radius: var(--radius);
   border-bottom-right-radius: var(--radius);
   z-index: 100;
+  transition: width 0.2s;
 }
 
 .profile {
@@ -118,6 +116,7 @@ body {
   transform: scale(1.16) rotate(-8deg);
 }
 
+/* --- MAIN CONTENT --- */
 main {
   margin-left: 270px;
   width: calc(100% - 270px);
@@ -126,10 +125,12 @@ main {
   padding: 0;
   display: flex;
   flex-direction: column;
+  transition: margin 0.2s, width 0.2s;
 }
 
 .section {
   width: 100%;
+  max-width: 900px;
   margin: 0 auto 2.4rem auto;
   padding: 3.2rem 2.2rem 2.8rem 2.2rem;
 }
@@ -153,11 +154,24 @@ main {
   font-size: 1.15em;
 }
 
-.card {
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  margin-bottom: 2.2rem;
+/* --- ABOUT & CONTACT DISTINCT VISUALS --- */
+#about.section.card,
+#contact.section.card {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 32px 0 #bfa17b55, 0 1.5px 0 #bfa17baa;
+}
+
+#about.section.card {
+  background: #fffaf4;
+  border-left: 8px solid #bfa17b;
+  border-radius: 2rem 1.5rem 1.5rem 2rem;
+}
+
+#contact.section.card {
+  background: #f5ede3;
+  border-right: 8px solid #5e4635;
+  border-radius: 1.5rem 2rem 2rem 1.5rem;
 }
 
 .card h2 {
@@ -335,86 +349,94 @@ footer {
   box-shadow: 0 1px 14px #e6d3b355;
 }
 
-@media (max-width: 850px) {
-  .sidebar {
-    position: relative;
-    width: 100%;
-    min-width: 0;
-    height: auto;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 0;
-    padding: 1rem 1rem;
-    box-shadow: 0 2px 12px #e6d3b360;
-  }
-  .profile,
-  .sidebar nav ul,
-  .socials {
-    flex-direction: row;
-    margin: 0;
-    gap: 1rem;
-  }
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 950px) {
   main {
-    margin-left: 0;
-    width: 100%;
+    max-width: 100vw;
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
+  .sidebar {
+    width: 220px;
+    min-width: 170px;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
   }
 }
 
-
-@media (max-width: 650px) {
+@media (max-width: 750px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-width: 0;
+    height: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0.7rem 0.7rem 0.5rem 0.7rem;
+    border-radius: 0;
+    box-shadow: 0 2px 12px #e6d3b360;
+    z-index: 999;
+  }
+  .profile {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 0.7em;
+  }
+  .profile-pic {
+    width: 46px;
+    height: 46px;
+    margin-bottom: 0;
+    margin-right: 0.5em;
+  }
+  .profile h1 {
+    font-size: 1.1rem;
+    margin: 0;
+    letter-spacing: 1px;
+  }
+  .profile .role {
+    font-size: 0.96rem;
+  }
+  .sidebar nav ul {
+    flex-direction: row;
+    gap: 0.6em;
+    margin: 0 0 0 1em;
+  }
+  .sidebar nav ul li a {
+    font-size: 1em;
+    padding: 0.25em 0.9em;
+  }
+  .socials {
+    margin-top: 0;
+    margin-left: auto;
+    gap: 0.7em;
+  }
+  main {
+    margin-left: 0;
+    width: 100vw;
+    padding-top: 72px;
+  }
   .section {
     padding: 2.2rem 0.7rem 1.5rem 0.7rem;
+    max-width: 100vw;
   }
-  .footer,
-  .hero {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+  #about.section.card,
+  #contact.section.card {
+    border-radius: 1.1rem;
+    border-width: 4px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   .projects-grid {
     flex-direction: column;
   }
 }
 
-/* --- Enhance About and Contact: make them clearly separated and visually distinct --- */
-
-/* Give each section more top and bottom margin for separation */
-#about.section.card,
-#contact.section.card {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-
-/* Add a subtle drop shadow for strong visual separation */
-#about.section.card,
-#contact.section.card {
-  box-shadow: 0 4px 32px 0 #bfa17b55, 0 1.5px 0 #bfa17baa;
-}
-
-/* Make both sections slightly offset and distinct */
-#about.section.card {
-  background: #fffaf4;
-  border-left: 8px solid #bfa17b;
-  border-radius: 2rem 1.5rem 1.5rem 2rem;
-}
-
-#contact.section.card {
-  background: #f5ede3;
-  border-right: 8px solid #5e4635;
-  border-radius: 1.5rem 2rem 2rem 1.5rem;
-}
-
-/* Optionally, add a little space between them if they stack on mobile */
-@media (max-width: 850px) {
-  #about.section.card,
-  #contact.section.card {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-    border-radius: 1.2rem;
-    border-width: 5px;
-  }
-  #about.section.card,
-  #contact.section.card {
-    box-shadow: 0 2px 20px #bfa17b33;
-  }
+/* For very small devices */
+@media (max-width: 450px) {
+  .profile h1 { font-size: 0.98rem; }
+  .sidebar nav ul li a { font-size: 0.93em; }
+  .section, footer { padding-left: 0.3em; padding-right: 0.3em; }
 }
