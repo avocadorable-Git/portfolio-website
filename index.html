@@ -1,111 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sauravi Shrestha | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sauravi Shrestha — Web Developer</title>
+<meta name="description" content="MERN Stack and Back-end Developer based in Jhapa, Nepal, specializing in PHP backend development. Building scalable systems with clean code and strong frontend fundamentals.">
+<meta property="og:title" content="Sauravi Shrestha — MERN Stack and Back-end Developer">
+<meta property="og:description" content="MERN Stack and Back-end Developer">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <aside class="sidebar">
-    <div class="profile">
-      <img src="https://avocadorable-Git.github.io/portfolio-website/image/IMG_3616.png" alt="Sauravi Shrestha" class="profile-pic">
-      <h1>Sauravi<br>Shrestha</h1>
-      <p class="role">BCA Student</p>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav id="navbar">
+  <div class="nav-logo">SS.</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+    <li><a href="#skills" onclick="closeMobileMenu()">Skills</a></li>
+    <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+    <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
+    <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Available for work</span>
+      </div>
+      <h1 class="hero-title">
+        Building Scalable<br>
+        <span class="gradient-text">Backend Systems</span><br>
+        with Java
+      </h1>
+      <p class="hero-sub">MERN Stack and Back-end Developer based in Jhapa, Nepal crafting robust APIs, resilient architectures, and seamless user experiences that scale.</p>
+      <div class="hero-ctas">
+        <a href="#projects" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          View Projects
+        </a>
+        <a href="#contact" class="btn-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Contact Me
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">2+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-num">15+</div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+      </div>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
-    
-  </aside>
-  <main>
-    <section id="home" class="section hero">
-      <h2>Hello, I'm Sauravi, the DON 👋</h2>
-      <p>
-        Creative BCA student and aspiring web developer.<br>
-        Passionate about design, coding, and creating memorable digital experiences.<br>
-        <span class="highlight">Hustling &amp; working hard for the future.</span>
-      </p>
-      <div class="socials">
-      <a href="https://www.facebook.com/justlemmesleep/" title="Facebook"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" alt="Facebook"></a>
-      <a href="https://www.instagram.com/saurabhihihi/" title="Instagram"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/instagram/instagram-original.svg" alt="Instagram"></a>
-      <a href="https://github.com/avocadorable-Git" title="GitHub"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"></a>
-    
-    </div>
-    </section>
-    <section id="about" class="section card">
-      <h2>About Me</h2>
-      <p>
-        I'm a creative thinker with a love for web development. Always learning, always dreaming, always building. I thrive on challenges and believe in growth through effort and curiosity.
-      </p>
-      <ul class="about-list">
-        <li>🌟 Creative</li>
-        <li>💻 Coder</li>
-        <li>🚀 Learner</li>
-        <li>🎨 Design Lover</li>
-      </ul>
-    </section>
-    <section id="projects" class="section card">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project">
-          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Personal Blog">
-          <div>
-            <h3>Personal Blog</h3>
-            <p>Dynamic blog site with dark mode & live preview.</p>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-img-wrap">
+          <div class="about-img-bg">
+            <div class="about-avatar">SS</div>
           </div>
         </div>
-        <div class="project">
-          <img src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" alt="Weather App">
-          <div>
-            <h3>Weather App</h3>
-            <p>Real-time weather app with beautiful UI & API integration.</p>
-          </div>
-        </div>
-        <div class="project">
-          <img src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif" alt="Portfolio Website">
-          <div>
-            <h3>Portfolio Website</h3>
-            <p>Animated, interactive, and responsive student portfolio.</p>
+      
+        <div class="about-badge-float b2">
+          <div class="badge-icon full">⚡</div>
+          <div class="badge-text">
+            <strong>MERN Stack Dev</strong>
+            <span>Frontend + Backend</span>
           </div>
         </div>
       </div>
-    </section>
-    <section id="gallery" class="section card">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img src="https://avocadorable-Git.github.io/portfolio-website/image/IMG_3616.png" alt="Gallery">
+      <div class="about-content reveal reveal-delay-2">
+        <div class="section-tag">About Me</div>
+        <h2>Code. Coffee.<br>Sleep. Repeat.</h2>
+        <p>I'm Sauravi Shrestha, a passionate MERN Stack Developer and Backend Developer from Jhapa, Nepal. I thrive at the intersection of complex backend logic and clean user interfaces building systems that don't just work, but scale.</p>
+        <p>My focus is Java backend development designing resilient APIs, efficient data layers, and architectures that hold up under real-world demand. But I never ignore the frontend. A seamless user experience is just as important as a solid server response.</p>
+        <p>When I'm not deep in code, you'll find me with a guitar — music and programming share the same logic: structure, creativity, and the pursuit of something that just <em>feels right</em>.</p>
+        <div class="about-tags">
+          <span class="tag">Web Development</span>
+          <span class="tag">HTML / CSS / JavaScript</span>
+          <span class="tag">PHP, MERN Stack</span>
+          <span class="tag">Problem Solver</span>
+          <span class="tag">Jhapa 🇳🇵</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Expertise</div>
+      <h2 class="section-title">Skills &amp; Proficiency</h2>
+      <p class="section-desc">A focused stack built around real-world delivery — frontend fundamentals, PHP, MERN Stack backbone.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skills-group reveal reveal-delay-1">
+        <div class="skills-group-title">Frontend</div>
+        <div class="skill-item">
+          <div class="skill-meta">
+            <span class="skill-name"><span class="skill-icon">🌐</span> HTML5</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill cyan" data-pct="85" style="width:0%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-meta">
+            <span class="skill-name"><span class="skill-icon">🎨</span> CSS3</span>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill cyan" data-pct="75" style="width:0%"></div></div>
+        </div>
+      </div>
+      <div class="skills-group reveal reveal-delay-2">
+        <div class="skills-group-title">Backend</div>
+        <div class="skill-item">
+          <div class="skill-meta">
+            <span class="skill-name"><span class="skill-icon">☕</span> PHP, NodeJS</span>
+            <span class="skill-pct">65%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill purple" data-pct="65" style="width:0%"></div></div>
+        </div>
        
+          <div class="skill-bar"><div class="skill-fill purple" data-pct="55" style="width:0%"></div></div>
+        </div>
       </div>
-    </section>
-    <section id="contact" class="section card">
-      <h2>Contact Me</h2>
-      <form id="contactForm">
-        <div class="input-group">
-          <input type="text" id="name" placeholder="Your Name" required>
+      <div class="skills-group reveal reveal-delay-3 skills-full">
+        <div class="skills-group-title">Tools &amp; Ecosystem</div>
+        <div class="tools-grid">
+          <div class="skill-item">
+            <div class="skill-meta"><span class="skill-name"><span class="skill-icon">🌿</span> Web Development </span><span class="skill-pct">60%</span></div>
+            <div class="skill-bar"><div class="skill-fill green" data-pct="60" style="width:0%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span class="skill-name"><span class="skill-icon">🗄️</span> SQL / MySQL</span><span class="skill-pct">65%</span></div>
+            <div class="skill-bar"><div class="skill-fill green" data-pct="65" style="width:0%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span class="skill-name"><span class="skill-icon">🐙</span> Git / GitHub</span><span class="skill-pct">70%</span></div>
+            <div class="skill-bar"><div class="skill-fill cyan" data-pct="70" style="width:0%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-meta"><span class="skill-name"><span class="skill-icon">🐳</span>PHP, MERN Stack</span><span class="skill-pct">45%</span></div>
+            <div class="skill-bar"><div class="skill-fill cyan" data-pct="45" style="width:0%"></div></div>
+          </div>
         </div>
-        <div class="input-group">
-          <input type="email" id="email" placeholder="Your Email" required>
-        </div>
-        <div class="input-group">
-          <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
-        </div>
-        <button type="submit" class="btn">Send Message</button>
-      </form>
-      <div class="contact-info">
-        <p>Email: <a href="mailto:sauravishrestha11@gmail.com">sauravishrestha11@gmail.com</a></p>
       </div>
-    </section>
-    <footer>
-      <p>&copy; 2025 Sauravi Shrestha. All rights reserved.</p>
-    </footer>
-  </main>
-  <script src="script.js"></script>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Work</div>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-desc">Real problems. Real solutions. Built to production standards with clean, maintainable code.</p>
+    </div>
+    <div class="projects-grid">
+
+    
+
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-num">02</div>
+        <div class="project-title">ShopNow — E-commerce Platform</div>
+        <div class="project-desc">Built a responsive e-commerce storefront with dynamic product catalog, cart management, and checkout flow. Backend powered by Spring Boot with secure payment integration and inventory management.</div>
+        <div class="project-stack">
+          <span class="stack-tag">HTML/CSS</span>
+          <span class="stack-tag">JavaScript</span>
+          <span class="stack-tag">Java</span>
+          <span class="stack-tag">Spring Boot</span>
+          <span class="stack-tag">MySQL</span>
+        </div>
+       
+
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-num">03</div>
+        <div class="project-title">Portfolio Website</div>
+        <div class="project-desc">Developers needed a fast way to create professional portfolios without design skills. Built a web app where users fill in their details and instantly generate a polished, downloadable HTML/PDF portfolio.</div>
+        <div class="project-stack">
+          <span class="stack-tag">HTML</span>
+          <span class="stack-tag">CSS</span>
+          <span class="stack-tag">JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://sauravishrestha.com.np" target="_blank" rel="noopener" class="proj-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+          <a href="#" class="proj-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Live
+          </a>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-num">04</div>
+        <div class="project-title">GIS Crystal - Inventory System</div>
+        <div class="project-desc">An inventory system that tracks sales and purchase and keeps record of the products easily.</div>
+        <div class="project-stack">
+          <span class="stack-tag">HTML</span>
+          <span class="stack-tag">CSS</span>
+          <span class="stack-tag">JavaScript</span>
+          <span class="stack-tag">PHP</span>
+        </div>
+        <div class="project-links">
+          <a href="https://giscystal.unaux.com" target="_blank" rel="noopener" class="proj-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+          <a href="#" class="proj-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Live
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Services</div>
+      <h2 class="section-title">What I Offer</h2>
+      <p class="section-desc">End-to-end development capabilities from pixel-perfect interfaces to production-grade APIs.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon cyan">🌐</div>
+        <div class="service-title">Web Design</div>
+        <div class="service-desc">Clean, intentional UI design with a focus on user experience. No clutter — every element earns its place.</div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon purple">⚙️</div>
+        <div class="service-title">Web Development</div>
+        <div class="service-desc">Full-cycle development from semantic HTML to dynamic, interactive interfaces that perform across all devices.</div>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon green">☕</div>
+        <div class="service-title">PHP, NodeJS Backend Dev</div>
+        <div class="service-desc">Scalable REST APIs, Spring Boot microservices, and secure database architectures built for real-world load.</div>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon cyan">📱</div>
+        <div class="service-title">Responsive Design</div>
+        <div class="service-desc">Mobile-first layouts that look sharp on every screen size — from phones to ultrawide monitors.</div>
+      </div>
+     
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">Get In Touch</div>
+      <h2 class="section-title">Let's Build Something</h2>
+      <p class="section-desc">Have a project in mind or just want to connect? My inbox is always open.</p>
+    </div>
+    <div class="contact-wrap reveal">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Talk to me,<br>let's make it happen.</h3>
+          <p>Whether you're looking for a backend developer, a creative problem solver, or someone who genuinely cares about the product they build — I'm here for it.</p>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:saurav.shrestha@example.com">sauravishrestha11@gmail.com</a>
+          </div>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.13 6.13l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+977-9800000000">+977 98XXXXXXXX</a>
+          </div>
+          <div class="contact-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Jhapa, Nepal 🇳🇵</span>
+          </div>
+          <div class="social-row">
+            <a href="https://github.com/sauravshrestha" target="_blank" rel="noopener" class="social-btn" title="GitHub">GH</a>
+            <a href="https://linkedin.com/in/sauravshrestha" target="_blank" rel="noopener" class="social-btn" title="LinkedIn">LI</a>
+            <a href="https://twitter.com/sauravshrestha" target="_blank" rel="noopener" class="social-btn" title="Twitter">TW</a>
+          </div>
+        </div>
+        <div>
+          <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="your@email.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" placeholder="What's this about?" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Tell me about your project, idea, or just say hi..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="check">✅</div>
+            <strong>Message sent!</strong>
+            <p>I'll get back to you within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">SS.</div>
+    <p>Designed &amp; built by <span>Sauravi Shrestha</span> · Jhapa, Nepal · 2025</p>
+    <p class="footer-copy">All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
