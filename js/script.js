@@ -1,4 +1,8 @@
+/* =============================================
+   SAURAV SHRESTHA — PORTFOLIO JAVASCRIPT
+   ============================================= */
 
+// ── Scroll Progress Bar ──────────────────────
 const progressBar = document.getElementById('scrollProgress');
 
 function updateScrollProgress() {
